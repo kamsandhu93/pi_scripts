@@ -91,7 +91,7 @@ try:
     scp_client = scp.SCPClient(client.get_transport(), progress=progress)
 
     for file_path in filtered_file_paths:
-        _, name = file_path.split("/Videos/")
+        name = file_path.split("/")[-1]
         print("Downlading: {}".format(name))
 
         scp_client.get(file_path)
