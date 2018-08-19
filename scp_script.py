@@ -93,9 +93,7 @@ try:
     for file_path in filtered_file_paths:
         name = file_path.split("/")[-1]
         print("Downlading: {}".format(name))
-
         scp_client.get(file_path)
-        # Should now be printing the current progress of your put function.
         print("OK")
 
         time.sleep(1)
