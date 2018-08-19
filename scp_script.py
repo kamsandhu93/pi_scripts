@@ -44,7 +44,7 @@ try:
     if sys.argv[1] == "-a":
         all_files = [file_path for file_path in file_paths if re.search(regex % "", file_path)]
         for file_path in all_files:
-            _, name = file_path.split("/Videos/")
+            name = file_path.split("/")[-1]
             print(name)
         sys.exit(0)
 
